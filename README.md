@@ -41,3 +41,18 @@ If the server starts successfully, you'll see the following output:
 2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
 ```
 
+Nützliche Requests in cUrl:
+
+GET:
+```
+curl -X GET 0.0.0.0:8080/expenses
+```
+
+POST:
+```
+curl -X POST \
+--trace \
+-H "Content-Type: application/json" \
+-d '{"reason": "Bonprix", "amount": "140.99", "category":"5", "date":"1748513903"}' \
+http://0.0.0.0:8080/expenses
+```
